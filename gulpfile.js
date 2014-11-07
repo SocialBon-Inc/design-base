@@ -8,24 +8,24 @@ var rename = require("gulp-rename");
 // creates css files from less
 gulp.task("less", function()
 {
-	gulp.src("less/**/*")
+	return gulp.src("less/**/*")
 		.pipe(less())
 		.on("error", function(error){ console.log(error); })
 		.pipe(gulp.dest("css/"));
 });
 
 // concatenates css into one stylesheet 
-gulp.task("concat", function()
+gulp.task("concat", ["less"],function()
 {
-	gulp.src(["css/**/*", "!css/style.css", "!css/style.min.css"])
+	return gulp.src(["css/**/*", "!css/style.css", "!css/style.min.css"])
 		.pipe(concat("style.css"))
 		.pipe(gulp.dest("css/"));
 });
 
 // minifies production stylesheet
-gulp.task("minify", function()
+gulp.task("minify", ["concat"], function()
 {
-	gulp.src("css/style.css")
+	return gulp.src("css/style.css")
 		.pipe(minify())
 		.pipe(rename("style.min.css"))
 		.pipe(gulp.dest("css/"));
