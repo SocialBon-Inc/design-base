@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'slurp';
-	src:url('slurp/slurp.eot?dpctfr');
-	src:url('slurp/slurp.eot?#iefixdpctfr') format('embedded-opentype'),
-		url('slurp/slurp.woff?dpctfr') format('woff'),
-		url('slurp/slurp.ttf?dpctfr') format('truetype'),
-		url('slurp/slurp.svg?dpctfr#slurp') format('svg');
+	src:url('fonts/slurp.eot?dpctfr');
+	src:url('fonts/slurp.eot?#iefixdpctfr') format('embedded-opentype'),
+		url('fonts/slurp.woff?dpctfr') format('woff'),
+		url('fonts/slurp.ttf?dpctfr') format('truetype'),
+		url('fonts/slurp.svg?dpctfr#slurp') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
