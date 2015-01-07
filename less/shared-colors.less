@@ -1,0 +1,44 @@
+/***********************************
+ **         shared colors         **
+ ***********************************/
+
+.ink {
+  background-color: @causely-navy;
+  color: @causely-white;
+}
+.sky {
+  background-color: @causely-blue;
+  color: @causely-white;
+}
+.leaf {
+  background-color: spin(desaturate(darken(@causely-green, 20%), 40%), 10%);
+  color: spin(lighten(@causely-green, 60%), -10%);
+}
+.clouds {
+  background-color: @causely-clouds;
+  color: @causely-white;
+}
+.night {
+  background-color: darken(@causely-blue, 65%);
+  color: @causely-white;
+}
+.day {
+  background-color: lighten(@causely-clouds, 31%);
+  color: darken(@causely-blue, 45%);
+}
+.error {
+  background-color: @causely-salmon;
+  color: spin(darken(@causely-salmon, 50%), -10%);
+}
+.warning {
+  background-color: @causely-yellow;
+  color: spin(darken(@causely-yellow, 50%), -20%);
+}
+.success {
+  background-color: @causely-green;
+  color: spin(darken(@causely-green, 50%), -10%);
+}
+.default {
+  background-color: @causely-blue;
+  color: spin(darken(@causely-blue, 50%), -10%);
+}
