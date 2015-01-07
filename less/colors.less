@@ -1,34 +1,38 @@
 /***********************************
-* CSS is generated from less files *
-*   don't mess with CSS directly   *
-***********************************/
+ **            colors             **
+ ***********************************/
 
-// palette
+@sojo-white: #f6f6ec;
+@sojo-gray: #76716f;
+@sojo-slate: #332f2c;
 
-@sojo-white:          #f6f6ec;
-@sojo-gray:           #76716f;
-@sojo-slate:          #332f2c;
+// sojo palette
+@sojo-blue: #05aed9;
+@sojo-orange: #f79d20;
+@sojo-green: #a4cc39;
+@sojo-magenta: #d91376;
 
-@sojo-blue:           #6bb3bd;
-@sojo-green:          #90d9a1;
-@sojo-yellow:         #e9b33f;
-@sojo-magenta:        #e03474;
+// alternate sojo palette
+@sojo-blue-alt: #6bb3bd;
+@sojo-green-alt: #90d9a1;
+@sojo-yellow-alt: #e9b33f;
+@sojo-magenta-alt: #e03474;
 
-@sweatangels-red:     #ef3742;
-@sweatangels-smoke:   #545454;
-@sweatangels-black:   #000000;
+@sweat-red: #ef3742;
+@sweat-smoke: #545454;
+@sweat-black: @0;
 
-@angelworks-steel:    #b3b3b3;
-@angelworks-red:      #ed1c24;
-@angelworks-blue:     #4890cd;
-@angelworks-cyan:     #33c2dc;
-@angelworks-carbon:   #404041;
+@angel-steel: #b3b3b3;
+@angel-red: #ed1c24;
+@angel-blue: #4890cd;
+@angel-cyan: #33c2dc;
+@angel-carbon: #404041;
 
-@punk-plum:           #290338;
-@punk-night:          #18181e;
-@punk-sky:            #125876;
-@punk-mist:           #cceaee;
-@punk-tips:           #771354;
+@punk-plum: #290338;
+@punk-night: #18181e;
+@punk-sky: #125876;
+@punk-mist: #cceaee;
+@punk-tips: #771354;
 
 // grayscale
 
@@ -39,3 +43,40 @@
 
 @white: @f;
 @black: @1;
+
+
+@shadowing: 0 4px 1px rgba(0,0,0,0.2);
+
+// interface palette
+@text: #fff;
+@neutral: #eee;
+@neutral-alt: #ddd;
+@outline: #fff;
+@shim: rgba(0,0,0,0.7);
+@shadow: rgba(0,0,0,0.1);
+@glow: rgba(255,255,255,0.5);
+
+// action palette
+@action: @causely-blue; // change @action to your main color
+@action-alt: lighten(@action, 18%);
+@action-hot: lighten(@action, 99%);
+
+// causely palette
+@causely-blue: #57b9fc;
+@causely-navy: #03303d;
+@causely-plum: #280537;
+@causely-salmon: #ff6060;
+@causely-yellow: #fffc62;
+@causely-green: #94ff99;
+@causely-emerald: #06563d;
+@causely-white: #f9f9f9;
+@causely-black: #010101;
+@causely-clouds: desaturate(@causely-blue, 70%);
+
+// blue gradient palette
+@signup-100: @causely-navy;
+@signup-80: mix(@signup-100, @signup-0, 80%);
+@signup-60: mix(@signup-100, @signup-0, 60%);
+@signup-40: mix(@signup-100, @signup-0, 40%);
+@signup-20: mix(@signup-100, @signup-0, 20%);
+@signup-0: @causely-blue;
