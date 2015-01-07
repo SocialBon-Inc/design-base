@@ -1,0 +1,80 @@
+/***********************************
+ **         media queries         **
+ ***********************************/
+
+// 480 pseudopixel break point
+@media (max-width: 30rem) {
+  .column {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 30rem) {
+
+}
+
+// 960 pseudopixel break point
+@media (min-width: 60rem) {
+	body {
+		font-size: 1.1em;
+	}
+	form {
+		.help {
+			display: inline-block;
+			padding-left: 1rem;
+		}
+	}
+}
+
+// 1200 pseudopixel break point
+@media (min-width: 75rem) {
+	body {
+		font-size: 1.2em;
+	}
+	section {
+		overflow: none;
+		padding: 6em 4em;
+		position: absolute;
+	}
+}
+
+/* large screen menu
+// 960px break point
+@media (min-width: 60rem) {
+	header {
+		background-color: @causely-white;
+		box-shadow: @shadowing;
+		color: @causely-black;
+	}
+	nav {
+		ul {
+			&.hotdog {
+				display: none;
+			}
+			&.menu {
+				background-color: @causely-white !important; 
+				width: 100% !important;
+				li {
+					border-bottom: none !important;
+					color: @causely-black;
+					display: inline-block;
+					&:nth-child(odd),
+					&:nth-child(even) {
+						background-color: inherit;
+					}
+					a {
+						color: @action;      
+					}
+				}
+			}
+		}
+		&.hotdog {
+			cursor: pointer;
+			text-align: right;
+		}
+		&.menu {
+
+			color: @causely-white;
+		}
+	}
+} */
