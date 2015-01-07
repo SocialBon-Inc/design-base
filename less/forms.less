@@ -1,0 +1,271 @@
+/***********************************
+ **             forms             **
+ ***********************************/
+
+ form {
+   user-select: none;
+	.validation {
+		display: inline-block;
+		float: left;
+		font-weight: normal;
+		line-height: 3rem;
+		margin-right: -2rem;
+		height: 3rem;
+		text-align: center;
+		width: 2rem;
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 10;
+	}
+	.help {
+		display: block;
+		ul {
+			display: inline-block;
+			margin: 0;
+			li {
+				display: inline-block;
+				opacity: 0.4;
+				padding: 0;
+				&.selected {
+					opacity: 0.9;
+				}
+				img {
+					float: left;
+					line-height: 1rem;
+					width: 3rem;
+				}
+			}
+		}
+	}
+}
+
+// some radio and checkboxes
+// yay
+// http://jsfiddle.net/YB8UW/8/
+
+fieldset {
+	padding: 0.5rem 0;
+	&:disabled {
+    filter: blur(0.1rem);
+    opacity: 0.7;
+	}
+}
+
+label {
+  background-color: transparent !important;
+  color: inherit !important;
+	display: block;
+	margin-bottom: 1rem;
+}
+
+legend {
+	font-size: 2rem;
+	font-family: @type-title;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+select {
+	-webkit-appearance: none;
+  background-color: @action-hot;
+	border: 0.2rem solid @action-hot;
+	border-radius: @rounding;
+	font-family: @type-copy;
+	font-size: 1rem;
+  font-weight: 700;
+	height: 3rem;
+	width: 15rem;
+	padding-left: 2.5rem;
+
+}
+
+input {
+	background-color: @action-hot;
+	border: 0.2rem solid @action-hot;
+	border-radius: @rounding;
+	color: @causely-black;
+	font-family: @type-copy;
+	font-size: 1rem;
+	height: 3rem;
+}
+
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email] {
+  font-weight: 700;
+	padding: 0 1rem 0 2.5rem;
+	line-height: 3rem;
+}
+
+input:focus,
+select:focus {
+	border: 0.2rem solid @action;
+	outline: none;
+}
+
+::-webkit-input-placeholder {
+	color: @action;
+}
+
+button {
+	background-color: @action;
+	border: 0.2rem solid @action;
+	border-radius: @rounding;
+  box-shadow: @shadowing;
+box-sizing: border-box;
+	color: @action-hot;
+	cursor: pointer;
+	display: inline-block;
+	font-family: @type-title;
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 2rem;
+	padding: 0.5rem 2rem;
+	&:focus {
+		background-color: @action-alt;
+		color: @action-hot;
+		outline: none;
+	}
+  &:hover {
+    border-color: @action-alt;
+    box-shadow: none;
+    text-shadow: none;
+  }
+	&:disabled {
+		background-color: @causely-clouds;
+    border-color: @causely-clouds;
+		color: @action-hot;
+		cursor: default;
+	}
+  &.signin {
+    font-size: 3rem;
+    font-weight: 200;
+    line-height: 3rem;
+    padding: 2rem;
+  }
+	&.submit {
+		border-radius: 2rem;
+		height: 4rem;
+		width: 4rem;
+		box-shadow: @shadowing;
+		font-size: 2rem;
+		padding: 0;
+    :hover {
+      box-shadow: none;
+      text-shadow: none;
+    }
+		> .text {
+			display: none;
+		}
+		> .icon:before {
+			font-family: @icons;
+      content: "\e116"; //icon-check
+			//content: "\e095"; //icon-arrow-right
+		}
+	}
+	&.return { // back arrow button
+		background: transparent;
+		border-radius: 2rem;
+    box-shadow: none;
+    color: @action;
+		height: 4rem;
+		width: 4rem;
+		border: 0;
+		font-size: 2rem;
+		float:left;
+		padding: 0;
+    text-shadow: @shadowing;
+    &:active {
+      background: inherit;
+      color: inherit;
+    }
+		> .text {
+			display: none;
+		}
+		> .icon:before {
+			font-family: @icons;
+      //content: "\e117"; //icon-cross
+			content: "\e039"; //icon-arrow-right
+		}
+	}
+	&.busy { // busy state
+		> .text {
+			// display : none;
+		}
+		> .icon:before {
+			font-family: @icons;
+			content: "\e105"; // icon-loader
+		}
+	}
+	// failure state
+	&.failed {
+		background-color: @causely-salmon!important;
+		border-color: @causely-salmon!important;
+		color: @causely-white!important;
+		> .text {
+			display : none;
+		}
+		> .icon:before {
+			font-family: @icons;
+			content: "\e107"; // icon-ban
+		}
+	}
+}
+
+
+
+//validation states
+label {
+	//input default
+	&.default {
+		> span.validation {
+			background-color: @action;
+			color: spin(darken(@action, 50%), -10%);
+			> span.icon:before {
+				font-family: @icons;
+				content: "\e114"; /* icon-plus */
+			}
+		}
+		&::-webkit-input-placeholder {
+			color: @action;
+		}
+	}
+	//input error
+	&.error {
+		:focus {
+			border-color: @causely-salmon;
+		}
+		span.validation {
+			background-color: @causely-salmon;
+			color: spin(darken(@causely-salmon, 50%), -10%);
+			> span.icon:before {
+				font-family: @icons;
+				content: "\e117"; /* icon-cross */
+			}
+		}
+		::-webkit-input-placeholder {
+			color: @causely-salmon;
+		}
+	}
+	//input success
+	&.success {
+		:focus {
+			border-color: @causely-green;
+		}
+		span.validation {
+			background-color: @causely-green;
+			color: spin(darken(@causely-green, 50%), -10%);
+			> span.icon:before {
+				font-family: @icons;
+				content: "\e116";// icon-check
+			}
+		}
+		::-webkit-input-placeholder {
+			color: spin(darken(@causely-green, 50%), -10%);
+		}
+	}
+}
