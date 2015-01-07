@@ -1,0 +1,78 @@
+/***********************************
+ **         special loader        **
+ ***********************************/
+
+.centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader {
+  border-radius: 100%;
+  height:6rem;
+  overflow: hidden;
+  width: 6rem;
+  animation:loader 4800ms infinite;
+}
+.anim {
+  color: white;
+  height: 6rem;
+  width: 6rem;
+  animation: anim 1200ms infinite;
+  font-size: 4rem;
+  line-height: 6rem;
+  span {
+    &:nth-child(1) { animation:impression 4800ms infinite; }
+    &:nth-child(2) { animation:share 4800ms infinite; }
+    &:nth-child(3) { animation:referral 4800ms infinite; }
+    &:nth-child(4) { animation:heart 4800ms infinite; }
+  }
+}
+
+@keyframes impression {
+  0% { opacity: 1; }
+  25% { opacity: 0; }
+  50% { opacity: 0; }
+  75% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes share {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  50% { opacity: 0; }
+  75% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes referral {
+    0% { opacity: 0; }
+  25% { opacity: 0; }
+  50% { opacity: 1; }
+  75% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes heart {
+    0% { opacity: 0; }
+  25% { opacity: 0; }
+  50% { opacity: 0; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+
+}
+
+@keyframes anim {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes loader {
+  0% { background-color: #d91376; }
+  25% { background-color: #f79d20; }
+  50% { background-color: #a4cc39; }
+  75% { background-color: #05aed9; }
+  100% { background-color: #d91376; }
+}
