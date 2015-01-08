@@ -2,13 +2,13 @@
  **            spinner            **
  ***********************************/
 
-// this needs to be a mixin
+// this probably needs to be a mixin
 // http://lesscss.org/features/#mixins-feature
 
 .spinner {
 	animation: spinner 3s infinite linear;
 }
-@-webkit-keyframes spinner {
+@keyframes spinner {
 	0% {
 		transform: rotate(0deg);
 	}
@@ -16,7 +16,7 @@
 		transform: rotate(359deg);
 	}
 }
-@keyframes spinner {
+@-webkit-keyframes spinner {
 	0% {
 		transform: rotate(0deg);
 	}

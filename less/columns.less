@@ -14,15 +14,6 @@
 	&.ratio-@{i}-@{maxColumns} { 
 		width: round( percentage( ( @i/@maxColumns ) ), 7 );
 		box-sizing: border-box;
-		padding-right: 1rem;
-		&:last-child {
-			padding-right: 0;
-		}
-    // 480 pseudopixel break point padding fix
-    @media (max-width: 30rem) {
-      margin-bottom: 1rem;
-      padding: 1rem;
-    }
 	}
 		#columns (@i - 1); // recurses for each column
 	}
@@ -32,10 +23,9 @@
 .column {
 	float: left;
 	&-row {
-		//overflow: hidden;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
 	}
 	#columns (@maxColumns);
 }

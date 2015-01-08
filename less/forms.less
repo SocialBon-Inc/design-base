@@ -3,7 +3,7 @@
  ***********************************/
 
  form {
-   user-select: none;
+	 user-select: none;
 	.validation {
 		display: inline-block;
 		float: left;
@@ -47,14 +47,14 @@
 fieldset {
 	padding: 0.5rem 0;
 	&:disabled {
-    filter: blur(0.1rem);
-    opacity: 0.7;
+		filter: blur(0.1rem);
+		opacity: 0.7;
 	}
 }
 
 label {
-  background-color: transparent !important;
-  color: inherit !important;
+	background-color: transparent !important;
+	color: inherit !important;
 	display: block;
 	margin-bottom: 1rem;
 }
@@ -68,12 +68,12 @@ legend {
 
 select {
 	-webkit-appearance: none;
-  background-color: @action-hot;
+	background-color: @action-hot;
 	border: 0.2rem solid @action-hot;
 	border-radius: @rounding;
 	font-family: @type-copy;
 	font-size: 1rem;
-  font-weight: 700;
+	font-weight: 700;
 	height: 3rem;
 	width: 15rem;
 	padding-left: 2.5rem;
@@ -96,7 +96,7 @@ input[type=tel],
 input[type=number],
 input[type=color],
 input[type=email] {
-  font-weight: 700;
+	font-weight: 700;
 	padding: 0 1rem 0 2.5rem;
 	line-height: 3rem;
 }
@@ -115,7 +115,7 @@ button {
 	background-color: @action;
 	border: 0.2rem solid @action;
 	border-radius: @rounding;
-  box-shadow: @shadowing;
+	box-shadow: @shadowing;
 box-sizing: border-box;
 	color: @action-hot;
 	cursor: pointer;
@@ -130,23 +130,23 @@ box-sizing: border-box;
 		color: @action-hot;
 		outline: none;
 	}
-  &:hover {
-    border-color: @action-alt;
-    box-shadow: none;
-    text-shadow: none;
-  }
+	&:hover {
+		border-color: @action-alt;
+		box-shadow: none;
+		text-shadow: none;
+	}
 	&:disabled {
 		background-color: @causely-clouds;
-    border-color: @causely-clouds;
+		border-color: @causely-clouds;
 		color: @action-hot;
 		cursor: default;
 	}
-  &.signin {
-    font-size: 3rem;
-    font-weight: 200;
-    line-height: 3rem;
-    padding: 2rem;
-  }
+	&.signin {
+		font-size: 3rem;
+		font-weight: 200;
+		line-height: 3rem;
+		padding: 2rem;
+	}
 	&.submit {
 		border-radius: 2rem;
 		height: 4rem;
@@ -154,41 +154,41 @@ box-sizing: border-box;
 		box-shadow: @shadowing;
 		font-size: 2rem;
 		padding: 0;
-    :hover {
-      box-shadow: none;
-      text-shadow: none;
-    }
+		:hover {
+			box-shadow: none;
+			text-shadow: none;
+		}
 		> .text {
 			display: none;
 		}
 		> .icon:before {
 			font-family: @icons;
-      content: "\e116"; //icon-check
+			content: "\e116"; //icon-check
 			//content: "\e095"; //icon-arrow-right
 		}
 	}
 	&.return { // back arrow button
 		background: transparent;
 		border-radius: 2rem;
-    box-shadow: none;
-    color: @action;
+		box-shadow: none;
+		color: @action;
 		height: 4rem;
 		width: 4rem;
 		border: 0;
 		font-size: 2rem;
 		float:left;
 		padding: 0;
-    text-shadow: @shadowing;
-    &:active {
-      background: inherit;
-      color: inherit;
-    }
+		text-shadow: @shadowing;
+		&:active {
+			background: inherit;
+			color: inherit;
+		}
 		> .text {
 			display: none;
 		}
 		> .icon:before {
 			font-family: @icons;
-      //content: "\e117"; //icon-cross
+			//content: "\e117"; //icon-cross
 			content: "\e039"; //icon-arrow-right
 		}
 	}
