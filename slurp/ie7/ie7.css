@@ -1,86 +1,101 @@
-.icon-thin-001_compose_write_pencil_new {
+.icon-picon-edit-page {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe600;');
 }
-.icon-thin-002_write_pencil_new_edit {
+.icon-picon-edit-pencil {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe614;');
 }
 .icon-thin-033_bubble_comment_chat_message_add_compose {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe615;');
 }
-.icon-thin-034_bubble_comment_chat_message_like {
+.icon-picon-bubble-heart {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe616;');
 }
-.icon-thin-036_bubble_comment_chat_message {
+.icon-picon-bubble-chat {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe617;');
 }
-.icon-thin-041_favorite_message_like {
+.icon-picon-favorite {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe618;');
 }
-.icon-thin-044_visability_view_watch_eye {
+.icon-picon-eye {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe619;');
 }
-.icon-thin-050_logout_exit_door {
+.icon-picon-logout {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61a;');
 }
-.icon-thin-120_download_import {
+.icon-picon-download {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61b;');
 }
-.icon-thin-198_user_create_add_new {
+.icon-picon-newuser {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61c;');
 }
-.icon-thin-200_user_bubble_chat_new {
+.icon-picon-round-user {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61d;');
 }
 .icon-thin-221_alert_attention_error {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61e;');
 }
-.icon-thin-227_fail_dangerous_error_unavailable {
+.icon-picon-round-fail {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61f;');
 }
-.icon-thin-228_information {
+.icon-picon-round-info {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe620;');
 }
-.icon-thin-229_question_support_help {
+.icon-picon-round-question {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe621;');
 }
-.icon-thin-233_heart_favorite_like {
+.icon-picon-heart {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe622;');
 }
-.icon-thin-253_x_remove_delete_close_exit {
+.icon-picon-round-close {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe623;');
 }
-.icon-thin-257_round_left_arrow_previous {
+.icon-picon-round-left {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe624;');
 }
-.icon-thin-258_round_right_arrow_next {
+.icon-picon-round-right {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe625;');
 }
-.icon-thin-409_full_screen_window_maximize {
+.icon-picon-round-fullscreen {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe626;');
 }
-.icon-thin-412_rotate_sync {
+.icon-picon-rotate-2x {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe627;');
 }
-.icon-thin-413_rotate_sync_clockwise_recycle {
+.icon-picon-rotate-3x {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe628;');
 }
-.icon-thin-435_star_favorite {
+.icon-picon-round-star {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe629;');
 }
-.icon-thin-461_power_on_switch_turn {
+.icon-picon-power {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe62a;');
 }
 .icon-causely-logo {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe62b;');
 }
-.icon-causely-referral {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe601;');
+.icon-causely-c {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe62c;');
+}
+.icon-causely-c-old {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe611;');
+}
+.icon-causely-love-fill {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe62d;');
+}
+.icon-causely-love-stroke {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe62e;');
 }
 .icon-causely-share {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe603;');
 }
-.icon-causely-c {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe611;');
+.icon-causely-referral {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe601;');
+}
+.icon-angels-checkin {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe62f;');
+}
+.icon-angels-sweat {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe630;');
 }
 .icon-punk-animal-food {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe612;');
@@ -102,6 +117,9 @@
 }
 .icon-punk-dalek {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe60f;');
+}
+.icon-dogfooding {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe631;');
 }
 .icon-metrics-impression {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe2d9;');
