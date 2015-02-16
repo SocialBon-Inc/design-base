@@ -1,0 +1,25 @@
+span[class^='drawing-'],
+span[class*=' drawing-'] {
+	height: 5rem;
+	width: 5rem;
+	display: inline-block;
+	background-position: 0 0;
+	background-size: auto auto;
+	background-repeat: no-repeat;
+}
+
+.drawing-punk-marines {
+	background-image: url(drawing-punk-marines.png);
+}
+
+.drawing-punk-army {
+	background-image: url(drawing-punk-army.png);
+}
+
+.drawing-punk-airforce {
+	background-image: url(drawing-punk-airforce.png);
+}
+
+.drawing-punk-navy {
+	background-image: url(drawing-punk-navy.png);
+}
