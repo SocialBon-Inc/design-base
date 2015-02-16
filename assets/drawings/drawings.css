@@ -1,10 +1,10 @@
 span[class^='drawing-'],
 span[class*=' drawing-'] {
-	height: 5rem;
-	width: 5rem;
+	height: 7rem;
+	width: 7rem;
 	display: inline-block;
 	background-position: 0 0;
-	background-size: auto auto;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 
