@@ -1,0 +1,31 @@
+/***********************************
+ **         column system         **
+ ***********************************/
+
+// based on https://kopepasah.com
+//        /tutorial/use-a-less-loop-to-create-your-css-columns/
+//
+// to use, add "column-row" to parent element
+// and "column ratio-X-Y" to children
+
+@maxColumns: 12; // sets the number of columns in the grid
+
+#columns (@i) when (@i > 0) {
+	&.ratio-@{i}-@{maxColumns} { 
+		width: round( percentage( ( @i/@maxColumns ) ), 7 );
+		box-sizing: border-box;
+	}
+		#columns (@i - 1); // recurses for each column
+	}
+
+#columns (0) {} // when column index reaches 0, do nothing
+
+.column {
+	float: left;
+	&-row {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+	}
+	#columns (@maxColumns);
+}

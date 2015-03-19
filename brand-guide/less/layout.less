@@ -1,0 +1,109 @@
+/***********************************
+ **             layout            **
+ ***********************************/
+
+body {
+	background-color: @f;
+	color: @0;
+}
+
+header {
+	background-color: @causely-black;
+	box-shadow: @shadowing;
+	color: @causely-white;
+	font-family: @type-title;
+	font-size: 1.3rem;
+	font-weight: 500;
+	line-height: 3;
+	padding: 0 2rem;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 400;
+	a.brand {
+		background-color: transparent;
+		border: none;
+		color: @causely-white;
+		font-weight: 700;
+	}
+}
+
+nav {
+	background: transparent;
+	color: @causely-white;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	user-select: none;
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			padding: 0 1rem;
+		}
+		&.hotdog {
+			background-color: @causely-plum;
+			cursor: pointer;
+			text-align: right;
+			position: relative;
+		}
+		&.menu {
+			background-color: @causely-plum;
+			color: @causely-white;
+			display: none;
+			overflow: scroll;
+			position: absolute;
+			right: 0;
+			top: 4rem;
+			width: 15rem;
+			li {
+				border-bottom: 0.2rem solid darken(@causely-plum, 2%);
+			}
+		}
+	}
+	a,
+	a:hover,
+	a:focus,
+	a:active {
+		background: none;
+		color: @causely-white;
+	}
+}
+
+section {
+	display: block;
+	height: 100%;
+	width: 100%;
+	overflow: visible;
+	padding: 6rem 2rem;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+main {
+	padding: 1rem 0;
+}
+
+article {
+	display: block;
+}
+
+footer {
+	background-color: @causely-black;
+	bottom: 0;
+	color: @causely-white;
+	font-size: 1rem;
+	line-height: 3;
+	padding: 0 2rem;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: 999;
+}
+
+img {
+	max-width: 100%;
+	width: 100%;
+}

@@ -1,0 +1,76 @@
+/***********************************
+ **           typography          **
+ ***********************************/
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: @type-copy;
+	font-weight: 500;
+	line-height: 1.45;
+}
+
+p {
+	margin-bottom: 1.3rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: @type-title;
+	font-weight: 500;
+	line-height: 1.2;
+	margin: 1.414rem 0 0.5rem;
+}
+h1 {
+	font-size: 3.157rem;
+	margin-top: 0;
+}
+h2 {
+	font-size: 2.369rem;
+}
+h3 {
+	font-size: 1.777rem;
+}
+h4 {
+	font-size: 1.333rem;
+}
+
+small {
+	font-size: 0.8rem;
+	line-height: 1rem;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+i,
+em {
+	font-style: italic;
+}
+
+big {
+	font-size: 1.8rem;
+	line-height: 1rem;
+}
+
+blockquote {
+	font-size: 1.6rem;
+	font-weight: 400;
+	font-style: italic;
+}
+
+blockquote:before {
+	content: "\e611"; // icon-double-quote
+	display: inline-block;
+	font-family: @icons;
+	font-style: normal;
+	margin-left: -2rem;
+	opacity: 0.3;
+	width: 1.8rem;
+}
