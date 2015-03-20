@@ -1,0 +1,503 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:700,300italic,500italic,700italic,300,500,200);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic);
+@import url(http://getbootstrap.com/dist/css/bootstrap.min.css);
+/***********************************
+ **            variables          **
+ ***********************************/
+/* TYPOGRAPHY */
+/***********************************
+ **        overall styles         **
+ ***********************************/
+::-moz-selection {
+  background: #280537;
+  color: #ffffff;
+}
+::selection {
+  background: #280537;
+  color: #ffffff;
+}
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: 180ms ease-in-out;
+          transition: 180ms ease-in-out;
+  vertical-align: baseline;
+}
+.nopadding {
+  padding: 0;
+}
+/***********************************
+ **         column system         **
+ ***********************************/
+/*
+@maxColumns: 12; // sets the number of columns in the grid
+@columnMargin: 0.3rem;
+
+#columns (@i) when (@i > 0) {
+	&.ratio-@{i}-@{maxColumns} { 
+		width: round( percentage( ( @i/@maxColumns) ) - @columnMargin*2.5, 7 );
+		box-sizing: border-box;
+	}
+  
+		#columns (@i - 1); // recurses for each column
+	}
+
+#columns (0) {} // when column index reaches 0, do nothing
+
+.column {
+	float: left;
+  margin: @columnMargin;
+  &:first-child {
+    margin-left: 0;
+  }
+  
+	&-row {
+		display: flex;
+		flex-flow: row wrap; 
+		justify-content: flex-start;
+    
+    .column:last-child {
+      margin-right: 0;
+    } 
+	}
+    
+#columns (@maxColumns); 
+} */
+/***********************************
+ **         media queries         **
+ ***********************************/
+/*@media (max-width: 30rem) {
+  .column {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 30rem) {
+
+}
+
+// 960 pseudopixel break point
+@media (min-width: 60rem) {
+	body {
+		font-size: 1.1em;
+	}
+	form {
+		.help {
+			display: inline-block;
+			padding-left: 1rem;
+		}
+	}
+}
+
+// 1200 pseudopixel break point
+@media (min-width: 75rem) {
+	body {
+		font-size: 1.2em;
+	}
+}*/
+/***********************************
+ **         swatch colors         **
+ ***********************************/
+.ink {
+  background-color: #03303d;
+  color: #ffffff;
+}
+.planetarium {
+  background-color: #013f53;
+  color: #ffffff;
+}
+.twilight {
+  background-color: #0f426c;
+  color: #ffffff;
+}
+.sky {
+  background-color: #57b9fc;
+  color: #ffffff;
+}
+.rain {
+  background-color: #76b4dd;
+  color: #ffffff;
+}
+.clouds {
+  background-color: #93aec0;
+  color: #ffffff;
+}
+.grass {
+  background-color: #169647;
+  color: #169647;
+}
+.leaf {
+  background-color: #4fcf5b;
+  color: #169647;
+}
+.mint {
+  background-color: #94ff99;
+  color: #169647;
+}
+.mustard {
+  background-color: #a1872c;
+  color: #ffffff;
+}
+.goldenrod {
+  background-color: #f5cf43;
+  color: #7a7a7a;
+}
+.canary {
+  background-color: #fffc62;
+  color: #a1872c;
+}
+.brick {
+  background-color: #600010;
+  color: #ffffff;
+}
+.lipstick {
+  background-color: #ed1c24;
+  color: #ffffff;
+}
+.salmon {
+  background-color: #ff6060;
+  color: #600010;
+}
+.charcoal {
+  background-color: #404041;
+  color: #ffffff;
+}
+.steel {
+  background-color: #7a7a7a;
+  color: #ffffff;
+}
+.storm {
+  background-color: #eaeae8;
+  color: #7a7a7a;
+}
+.glacier {
+  background-color: #f2f2f2;
+  color: #7a7a7a;
+}
+.night {
+  background-color: #000000;
+  color: #ffffff;
+}
+.day {
+  background-color: #ffffff;
+  color: #7a7a7a;
+}
+.plum {
+  background-color: #280537;
+  color: #ffffff;
+}
+.sky-90 {
+  background-color: #68c1fd;
+  color: #ffffff;
+}
+.sky-80 {
+  background-color: #78c8fd;
+  color: #ffffff;
+}
+.sky-70 {
+  background-color: #89cffd;
+  color: #ffffff;
+}
+.sky-60 {
+  background-color: #9ad6fd;
+  color: #ffffff;
+}
+.sky-50 {
+  background-color: #abddfe;
+  color: #ffffff;
+}
+.sky-40 {
+  background-color: #bce3fe;
+  color: #ffffff;
+}
+.sky-30 {
+  background-color: #cdeafe;
+  color: #ffffff;
+}
+.sky-20 {
+  background-color: #ddf1fe;
+  color: #ffffff;
+}
+.sky-10 {
+  background-color: #eef8ff;
+  color: #ffffff;
+}
+.leaf-90 {
+  background-color: #61d46b;
+  color: #ffffff;
+}
+.leaf-80 {
+  background-color: #72d87c;
+  color: #ffffff;
+}
+.leaf-70 {
+  background-color: #84dd8c;
+  color: #ffffff;
+}
+.leaf-60 {
+  background-color: #95e29d;
+  color: #ffffff;
+}
+.leaf-50 {
+  background-color: #a7e7ad;
+  color: #ffffff;
+}
+.leaf-40 {
+  background-color: #b9ecbd;
+  color: #ffffff;
+}
+.leaf-30 {
+  background-color: #caf1ce;
+  color: #ffffff;
+}
+.leaf-20 {
+  background-color: #dcf5de;
+  color: #ffffff;
+}
+.leaf-10 {
+  background-color: #edfaef;
+  color: #ffffff;
+}
+.goldenrod-90 {
+  background-color: #f6d456;
+  color: #ffffff;
+}
+.goldenrod-80 {
+  background-color: #f7d869;
+  color: #ffffff;
+}
+.goldenrod-70 {
+  background-color: #f8dd7b;
+  color: #ffffff;
+}
+.goldenrod-60 {
+  background-color: #f9e28e;
+  color: #ffffff;
+}
+.goldenrod-50 {
+  background-color: #fae7a1;
+  color: #ffffff;
+}
+.goldenrod-40 {
+  background-color: #fbecb4;
+  color: #ffffff;
+}
+.goldenrod-30 {
+  background-color: #fcf1c7;
+  color: #ffffff;
+}
+.goldenrod-20 {
+  background-color: #fdf5da;
+  color: #ffffff;
+}
+.goldenrod-10 {
+  background-color: #fefaec;
+  color: #ffffff;
+}
+.rain-90 {
+  background-color: #84bbe0;
+  color: #ffffff;
+}
+.rain-80 {
+  background-color: #91c3e4;
+  color: #ffffff;
+}
+.rain-70 {
+  background-color: #9fcae7;
+  color: #ffffff;
+}
+.rain-60 {
+  background-color: #add2eb;
+  color: #ffffff;
+}
+.rain-50 {
+  background-color: #badaee;
+  color: #ffffff;
+}
+.rain-40 {
+  background-color: #c8e1f1;
+  color: #ffffff;
+}
+.rain-30 {
+  background-color: #d6e9f5;
+  color: #ffffff;
+}
+.rain-20 {
+  background-color: #e4f0f8;
+  color: #ffffff;
+}
+.rain-10 {
+  background-color: #f1f8fc;
+  color: #ffffff;
+}
+.lipstick-90 {
+  background-color: #ef333a;
+  color: #ffffff;
+}
+.lipstick-80 {
+  background-color: #f14950;
+  color: #ffffff;
+}
+.lipstick-70 {
+  background-color: #f36066;
+  color: #ffffff;
+}
+.lipstick-60 {
+  background-color: #f4777c;
+  color: #ffffff;
+}
+.lipstick-50 {
+  background-color: #f68e92;
+  color: #ffffff;
+}
+.lipstick-40 {
+  background-color: #f8a4a7;
+  color: #ffffff;
+}
+.lipstick-30 {
+  background-color: #fabbbd;
+  color: #ffffff;
+}
+.lipstick-20 {
+  background-color: #fbd2d3;
+  color: #ffffff;
+}
+.lipstick-10 {
+  background-color: #fde8e9;
+  color: #ffffff;
+}
+.error {
+  background-color: #ff6060;
+  color: #600010;
+}
+.warning {
+  background-color: #fffc62;
+  color: #a1872c;
+}
+.success {
+  background-color: #4fcf5b;
+  color: #169647;
+}
+.default {
+  background-color: #93aec0;
+  color: #0f426c;
+}
+/***********************************
+ **    guide-specific sections    **
+ ***********************************/
+body {
+  font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
+  color: #404041;
+  font-size: 16px;
+  line-height: 1.2;
+}
+header {
+  background-color: #000000;
+  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  font-family: 'Exo 2', 'Helvetica Neue', 'Arial Narrow', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 3;
+  padding: 0 2rem;
+  width: 100%;
+  z-index: 400;
+}
+header a.brand {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: none;
+}
+header nav {
+  float: right;
+}
+#grid {
+  background-color: #0f426c;
+}
+#grid .column {
+  background: rgba(87, 185, 252, 0.4);
+  border: 1px dotted #ffffff;
+}
+section {
+  margin: 2rem 5rem;
+}
+.swatch {
+  border-radius: 0.5rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  background-color: #eaeae8;
+  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+.swatch-color {
+  position: relative;
+  padding: 6rem 0;
+  display: block;
+}
+.swatch-color.day {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 0;
+}
+.swatch-color.storm {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+.swatch-info {
+  padding: 1em;
+  text-align: center;
+  position: relative;
+}
+.swatch-info p {
+  margin-bottom: .5em;
+}
+.swatch-info p:first-child {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.swatch-info p:last-child {
+  font-size: 70%;
+  margin-bottom: 0;
+}
+.tint {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  color: #404041;
+}
+.tint:first-child {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.tint .hex {
+  font-weight: 700;
+  float: right;
+}
+.color-balance {
+  border: 1px solid #eaeae8;
+}
+.balance-55 {
+  padding: 7.7rem;
+  text-align: center;
+}
+.balance-55 .text-box {
+  font-size: 7rem;
+  display: inline-block;
+  border-style: solid;
+  border-color: #000000;
+  border-bottom-width: 1.4rem;
+}
+.balance-55 .text-box.sweatangels {
+  border-color: #404041;
+}
+.balance-30 {
+  padding: 4.2rem;
+}
+.balance-10 {
+  padding: 1.4rem;
+}
+.balance-5 {
+  padding: 0.7rem;
+}

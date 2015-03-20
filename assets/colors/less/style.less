@@ -1,0 +1,708 @@
+@import "compass/css3"
+
+/***********************************
+ **            variables          **
+ ***********************************/
+
+// neutrals
+@causely-charcoal: #404041;
+@causely-steel: #7A7A7A;
+@causely-storm: #EAEAE8;
+@causely-glacier: #F2F2F2;
+@causely-white: #fff;
+@causely-black: #000;
+
+// blue hues
+@causely-ink: #03303D;
+@causely-planetarium: #013F53;
+@causely-twilight: #0F426C;
+@causely-sky: #57b9fc;
+@causely-rain: #76B4DD;
+@causely-clouds: desaturate(@causely-blue, 70%); // hex value: #93AEC0
+
+// blue mixes
+@signup-100: @causely-twilight;
+@signup-80: mix(@signup-100, @signup-0, 80%);
+@signup-60: mix(@signup-100, @signup-0, 60%);
+@signup-40: mix(@signup-100, @signup-0, 40%);
+@signup-20: mix(@signup-100, @signup-0, 20%);
+@signup-0: @causely-blue;
+
+// green hues
+@causely-mint: #94FF99;
+@causely-grass: #169647;
+@causely-leaf: #4FCF5B;
+
+// red hues
+@causely-brick: #600010;
+@causely-lipstick: #ED1C24;
+@causely-salmon: #FF6060;
+
+// yellow hues
+@causely-mustard: #A1872C;
+@causely-goldenrod: #F5CF43;
+@causely-canary: #FFFC62;
+
+// other colors
+@causely-plum: #280537;
+
+// sky tints
+@sky-100: @causely-blue;
+@sky-90: #68C1FD;
+@sky-80: #78C8FD;
+@sky-70: #89CFFD;
+@sky-60: #9AD6FD;
+@sky-50: #ABDDFE;
+@sky-40: #BCE3FE;
+@sky-30: #CDEAFE;
+@sky-20: #DDF1FE;
+@sky-10: #EEF8FF;
+
+// leaf tints
+@leaf-100: @causely-leaf;
+@leaf-90: #61D46B;
+@leaf-80: #72D87C;
+@leaf-70: #84DD8C;
+@leaf-60: #95E29D;
+@leaf-50: #A7E7AD;
+@leaf-40: #B9ECBD;
+@leaf-30: #CAF1CE;
+@leaf-20: #DCF5DE;
+@leaf-10: #EDFAEF;
+
+// goldenrod tints
+@goldenrod-100: @causely-goldenrod;
+@goldenrod-90: #F6D456;
+@goldenrod-80: #F7D869;
+@goldenrod-70: #F8DD7B;
+@goldenrod-60: #F9E28E;
+@goldenrod-50: #FAE7A1;
+@goldenrod-40: #FBECB4;
+@goldenrod-30: #FCF1C7;
+@goldenrod-20: #FDF5DA;
+@goldenrod-10: #FEFAEC;
+
+//lipstick tints
+@lipstick-100: @causely-lipstick;
+@lipstick-90: #EF333A;
+@lipstick-80: #F14950;
+@lipstick-70: #F36066;
+@lipstick-60: #F4777C;
+@lipstick-50: #F68E92;
+@lipstick-40: #F8A4A7;
+@lipstick-30: #FABBBD;
+@lipstick-20: #FBD2D3;
+@lipstick-10: #FDE8E9;
+
+//rain tints
+@rain-100: @causely-rain;
+@rain-90: #84BBE0;
+@rain-80: #91C3E4;
+@rain-70: #9FCAE7;
+@rain-60: #ADD2EB;
+@rain-50: #BADAEE;
+@rain-40: #C8E1F1;
+@rain-30: #D6E9F5;
+@rain-20: #E4F0F8;
+@rain-10: #F1F8FC;
+
+// Core Causely colors
+@causely-blue: @causely-sky; 
+@causely-light-gray: @causely-storm;
+
+
+// SweatAngels colors
+@sweatangels-red: @causely-lipstick;
+@sweatangels-white: @causely-white;
+@sweatangels-light-gray: @causely-storm;
+@sweatangels-gray: @causely-charcoal;
+@sweatangels-blue: @causely-rain;
+
+// UI colors
+@causely-error: @causely-salmon;
+@causely-warning: @causely-canary;
+@causely-success: @causely-leaf;
+@causely-alert: @causely-clouds;
+
+@causely-error-text: @causely-brick;
+@causely-warning-text: @causely-mustard;
+@causely-success-text: @causely-grass;
+@causely-alert-text: @causely-twilight;
+
+@causely-input: @causely-blue;
+
+// action palette
+@action: @causely-blue; // change @action to your main color
+@action-alt: lighten(@action, 18%);
+@action-hot: lighten(@action, 99%);
+
+
+/* TYPOGRAPHY */
+
+// Exo 2 webfonts
+@import url(http://fonts.googleapis.com/css?family=Exo+2:700,300italic,500italic,700italic,300,500,200);
+
+// Lato webfonts
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic);
+
+// text variables
+@type-copy: 'Lato', 'Helvetica Neue', 'Arial', sans-serif; // body copy stack
+@type-title: 'Exo 2', 'Helvetica Neue', 'Arial Narrow', sans-serif; // header font stack
+
+// effects variables
+@rounding: 0.5rem; // rounded corner control
+@shadowing: 0 0.2rem 0.3rem @shadow;
+
+@balance-padding-base: 0.7rem;
+@balance-padding-55: 11;
+@balance-padding-30: 6;
+@balance-padding-10: 2;
+
+// interface palette
+@text: #fff;
+@neutral: #eee;
+@neutral-alt: #ddd;
+@outline: #fff;
+@shim: rgba(0,0,0,0.7);
+@shadow: fade(@causely-black, 10%);
+@glow: rgba(255,255,255,0.5);
+
+
+@import url(http://getbootstrap.com/dist/css/bootstrap.min.css);
+
+/***********************************
+ **        overall styles         **
+ ***********************************/
+
+// text selection
+::selection {
+	background: @causely-plum;
+	color: @causely-white;
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	transition: 180ms ease-in-out;
+	vertical-align: baseline;
+}
+
+.nopadding {
+	padding: 0;
+}
+
+
+/***********************************
+ **         column system         **
+ ***********************************/
+
+// based on https://kopepasah.com
+//        /tutorial/use-a-less-loop-to-create-your-css-columns/
+//
+// to use, add "column-row" to parent element
+// and "column ratio-X-Y" to children
+/*
+@maxColumns: 12; // sets the number of columns in the grid
+@columnMargin: 0.3rem;
+
+#columns (@i) when (@i > 0) {
+	&.ratio-@{i}-@{maxColumns} { 
+		width: round( percentage( ( @i/@maxColumns) ) - @columnMargin*2.5, 7 );
+		box-sizing: border-box;
+	}
+  
+		#columns (@i - 1); // recurses for each column
+	}
+
+#columns (0) {} // when column index reaches 0, do nothing
+
+.column {
+	float: left;
+  margin: @columnMargin;
+  &:first-child {
+    margin-left: 0;
+  }
+  
+	&-row {
+		display: flex;
+		flex-flow: row wrap; 
+		justify-content: flex-start;
+    
+    .column:last-child {
+      margin-right: 0;
+    } 
+	}
+    
+#columns (@maxColumns); 
+} */
+
+/***********************************
+ **         media queries         **
+ ***********************************/
+
+// 480 pseudopixel break point
+/*@media (max-width: 30rem) {
+  .column {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 30rem) {
+
+}
+
+// 960 pseudopixel break point
+@media (min-width: 60rem) {
+	body {
+		font-size: 1.1em;
+	}
+	form {
+		.help {
+			display: inline-block;
+			padding-left: 1rem;
+		}
+	}
+}
+
+// 1200 pseudopixel break point
+@media (min-width: 75rem) {
+	body {
+		font-size: 1.2em;
+	}
+}*/
+
+/***********************************
+ **         swatch colors         **
+ ***********************************/
+
+// blues
+.ink {
+  background-color: @causely-ink;
+  color: @causely-white;
+}
+.planetarium {
+  background-color: @causely-planetarium;
+  color: @causely-white;
+}
+.twilight {
+  background-color: @causely-twilight;
+  color: @causely-white;
+}
+.sky {
+  background-color: @causely-blue;
+  color: @causely-white;
+}
+.rain {
+  background-color: @causely-rain;
+  color: @causely-white;
+}
+.clouds {
+  background-color: @causely-clouds;
+  color: @causely-white;
+}
+
+//greens
+.grass {
+  background-color: @causely-grass;
+  color: @causely-grass;
+}
+.leaf {
+  background-color: @causely-leaf;
+  color: @causely-grass;
+}
+.mint {
+  background-color: @causely-mint;
+  color: @causely-grass;
+}
+
+//yellows
+.mustard { 
+  background-color: @causely-mustard;
+  color: @causely-white;
+}
+.goldenrod {
+  background-color: @causely-goldenrod;
+  color: @causely-steel;
+}
+.canary {
+  background-color: @causely-canary;
+  color: @causely-mustard;
+}
+
+//reds
+.brick {
+  background-color: @causely-brick;
+  color: @causely-white;
+}
+.lipstick {
+  background-color: @causely-lipstick;
+  color: @causely-white;
+}
+.salmon {
+  background-color: @causely-salmon;
+  color: @causely-brick;
+}
+
+// neutrals aka grays
+.charcoal {
+  background-color: @causely-charcoal;
+  color: @causely-white;
+}
+.steel {
+  background-color: @causely-steel;
+  color: @causely-white;
+}
+.storm {
+  background-color: @causely-storm;
+  color: @causely-steel;
+}
+.glacier {
+  background-color: @causely-glacier;
+  color: @causely-steel;
+}
+
+
+//black, white & plum
+.night {
+  background-color: @causely-black;
+  color: @causely-white;
+}
+.day {
+  background-color: @causely-white;
+  color: @causely-steel;
+}
+.plum {
+  background-color: @causely-plum;
+  color: @causely-white;
+}
+
+// tints
+.sky-90 { 
+	background-color: @sky-90; 
+	color: @causely-white;
+}
+.sky-80 { 
+	background-color: @sky-80; 
+	color: @causely-white;
+}
+.sky-70 { 
+	background-color: @sky-70; 
+	color: @causely-white;
+}
+.sky-60 { 
+	background-color: @sky-60; 
+	color: @causely-white;
+}
+.sky-50 { 
+	background-color: @sky-50; 
+	color: @causely-white;
+}
+.sky-40 { 
+	background-color: @sky-40; 
+	color: @causely-white;
+}
+.sky-30 { 
+	background-color: @sky-30; 
+	color: @causely-white;
+}
+.sky-20 { 
+	background-color: @sky-20; 
+	color: @causely-white;
+}
+.sky-10 { 
+	background-color: @sky-10; 
+	color: @causely-white;
+}
+
+.leaf-90 { 
+	background-color: @leaf-90; 
+	color: @causely-white;
+}
+.leaf-80 { 
+	background-color: @leaf-80; 
+	color: @causely-white;
+}
+.leaf-70 { 
+	background-color: @leaf-70; 
+	color: @causely-white;
+}
+.leaf-60 { 
+	background-color: @leaf-60; 
+	color: @causely-white;
+}
+.leaf-50 { 
+	background-color: @leaf-50; 
+	color: @causely-white;
+}
+.leaf-40 { 
+	background-color: @leaf-40; 
+	color: @causely-white;
+}
+.leaf-30 { 
+	background-color: @leaf-30; 
+	color: @causely-white;
+}
+.leaf-20 { 
+	background-color: @leaf-20; 
+	color: @causely-white;
+}
+.leaf-10 { 
+	background-color: @leaf-10; 
+	color: @causely-white;
+}
+
+.goldenrod-90 { 
+	background-color: @goldenrod-90; 
+	color: @causely-white;
+}
+.goldenrod-80 { 
+	background-color: @goldenrod-80; 
+	color: @causely-white;
+}
+.goldenrod-70 { 
+	background-color: @goldenrod-70; 
+	color: @causely-white;
+}
+.goldenrod-60 { 
+	background-color: @goldenrod-60; 
+	color: @causely-white;
+}
+.goldenrod-50 { 
+	background-color: @goldenrod-50; 
+	color: @causely-white;
+}
+.goldenrod-40 { 
+	background-color: @goldenrod-40; 
+	color: @causely-white;
+}
+.goldenrod-30 { 
+	background-color: @goldenrod-30; 
+	color: @causely-white;
+}
+.goldenrod-20 { 
+	background-color: @goldenrod-20; 
+	color: @causely-white;
+}
+.goldenrod-10 { 
+	background-color: @goldenrod-10; 
+	color: @causely-white;
+}
+
+.rain-90 { 
+	background-color: @rain-90; 
+	color: @causely-white;
+}
+.rain-80 { 
+	background-color: @rain-80; 
+	color: @causely-white;
+}
+.rain-70 { 
+	background-color: @rain-70; 
+	color: @causely-white;
+}
+.rain-60 { 
+	background-color: @rain-60; 
+	color: @causely-white;
+}
+.rain-50 { 
+	background-color: @rain-50; 
+	color: @causely-white;
+}
+.rain-40 { 
+	background-color: @rain-40; 
+	color: @causely-white;
+}
+.rain-30 { 
+	background-color: @rain-30; 
+	color: @causely-white;
+}
+.rain-20 { 
+	background-color: @rain-20; 
+	color: @causely-white;
+}
+.rain-10 { 
+	background-color: @rain-10; 
+	color: @causely-white;
+}
+
+.lipstick-90 { 
+	background-color: @lipstick-90; 
+	color: @causely-white;
+}
+.lipstick-80 { 
+	background-color: @lipstick-80; 
+	color: @causely-white;
+}
+.lipstick-70 { 
+	background-color: @lipstick-70; 
+	color: @causely-white;
+}
+.lipstick-60 { 
+	background-color: @lipstick-60; 
+	color: @causely-white;
+}
+.lipstick-50 { 
+	background-color: @lipstick-50; 
+	color: @causely-white;
+}
+.lipstick-40 { 
+	background-color: @lipstick-40; 
+	color: @causely-white;
+}
+.lipstick-30 { 
+	background-color: @lipstick-30; 
+	color: @causely-white;
+}
+.lipstick-20 { 
+	background-color: @lipstick-20; 
+	color: @causely-white;
+}
+.lipstick-10 { 
+	background-color: @lipstick-10; 
+	color: @causely-white;
+}
+
+// UI specific
+.error {
+  background-color: @causely-error;
+  color: @causely-error-text;
+}
+.warning {
+  background-color: @causely-warning;
+  color: @causely-warning-text;
+}
+.success {
+  background-color: @causely-success;
+  color: @causely-success-text;
+}
+.default /*alert*/ {
+  background-color: @causely-alert;
+  color: @causely-alert-text;
+}
+
+
+/***********************************
+ **    guide-specific sections    **
+ ***********************************/
+body {
+  font-family: @type-copy;
+	color: @causely-charcoal;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+header {
+	background-color: @causely-black;
+	box-shadow: @shadowing;
+	color: @causely-white;
+	font-family: @type-title;
+	font-size: 1.3rem;
+	font-weight: 500;
+	text-align: center;
+	line-height: 3;
+	padding: 0 2rem;
+	width: 100%;
+	z-index: 400;
+	a.brand {
+		background-color: transparent;
+		border: none;
+		color: @causely-white;
+		font-weight: 700;
+		font-style: italic;
+		text-decoration: none; 
+	}
+	nav { float: right; }
+}
+
+#grid { background-color: @causely-twilight; }
+
+#grid .column {
+  background: fade(@causely-blue, 40%);
+  border: 1px dotted @causely-white;
+}
+
+section { margin: 2rem 5rem; }
+
+.swatch {
+  border-radius: @rounding;
+	margin: 0;
+  margin-bottom: 2rem;
+  overflow: hidden;
+	background-color: @causely-storm; 
+	box-shadow: @shadowing;
+  }
+    
+.swatch-color {
+  position: relative;
+  padding: 6rem 0;
+  display: block;
+  
+  &.day {
+    border: 1px solid fade(@causely-black, 10%); 
+		border-bottom: 0;
+  }
+  &.storm {
+    border-bottom: 1px solid fade(@causely-black, 7%); 
+  }
+}
+
+.swatch-info {
+  padding: 1em;
+  text-align: center;
+	position: relative;
+	
+  p {
+    margin-bottom: .5em;
+
+    &:first-child {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &:last-child {
+			font-size: 70%;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tint {
+	display: block;
+	width: 100%; 
+	padding: 15px;
+	color: @causely-charcoal;
+	
+	&:first-child {
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}
+
+.tint .hex { font-weight: 700; float: right; }
+
+.color-balance { 
+	border: 1px solid @causely-storm;
+}
+
+.balance-55 { 
+	padding: @balance-padding-base * @balance-padding-55; 
+	text-align: center;
+	
+	.text-box {
+		font-size: 7rem; 
+		display: inline-block;
+		border-style: solid; 
+		border-color: @causely-black; 
+		border-bottom-width: @balance-padding-base * @balance-padding-10 ;
+		
+		&.sweatangels {
+			border-color: @causely-charcoal; 
+		}
+	}
+}
+
+.balance-30 { padding: @balance-padding-base * @balance-padding-30; }
+.balance-10 { padding: @balance-padding-base * @balance-padding-10; }
+.balance-5 { padding: @balance-padding-base; }
+
+ 
